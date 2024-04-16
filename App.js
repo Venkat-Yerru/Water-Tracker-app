@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import WaterTrackerScreen from './WaterTrackerScreen/WaterTrackerScreen';
+import SettingsScreen from './SettingsScreen/SettingsScreen';
+import HomeScreen from './HomeScreen/HomeScreen'; // Import the new home screen component
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
+  const [goal, setGoal] = useState(0);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        {/* Pass WaterTrackerScreen component with goal as a prop */}
+        <Stack.Screen name="WaterTrackerScreen">
+          {props => <WaterTrackerScreen {...props} goal={goal} />}
+        </Stack.Screen>
+        {/* Pass SettingsScreen component with setGoal as a prop */}
+        <Stack.Screen name="SettingsScreen">
+          {props => <SettingsScreen {...props} setGoal={setGoal} />}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
