@@ -1,5 +1,6 @@
 # Water-Tracker-app
  It's a simple water tracking app designed to monitor daily water intake.
+ 
  1: Home Screen
 <img width="1440" alt="Screenshot 2024-04-15 at 11 46 52 PM" src="https://github.com/Venkat-Yerru/Water-Tracker-app/assets/167157451/0fe1130f-ad6f-47fc-87f0-cf10e5e0e6d7">
  2: Goal Setting screen
