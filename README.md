@@ -4,6 +4,9 @@ Personal Mobile App Final
 
 Student names:- Venkat Yerru & Thrishika reddy Putta
 
+# Video Link: 
+
+# https://drive.google.com/file/d/1HwkTukVZ07uDM4og4Q5DI0KQor6LJjiQ/view?usp=sharing
 
 # Overview
 It's a simple water tracking app designed to monitor daily water intake. We have chosen this app to solve the problem of daily water intake. We suffered from this problem daily. This app is designed for regular usage and is very beneficial for knowing and noting daily water intake. The app was built using React Native. We imported several libraries like navigation, material icons, and many more. It basically consists of water tracker screens and a goal setting screen. Initially, we need to set the required water intake goal in the goal setting app. After setting the goal, we can move to the water tracking screen to increase the number of water cups taken each time you drink water. We can also note the time of water intake so that you can track water intake on an hourly basis.
